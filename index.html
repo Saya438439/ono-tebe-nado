@@ -7,82 +7,81 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Оно тебе надо — аукцион вещей, в которые никто не верил</title>
   <link rel="stylesheet" href="./fonts/fonts.css" />
-  <link rel="stylesheet" href="./styles/global.css" />
   <link rel="stylesheet" href="./styles/style.css" />
+  <link rel="stylesheet" href="./styles/global.css" />
 </head>
 
-<body class="body">
+<body>
 
-  <header class="header_content">
-    <nav>
-      <div class="line">
-        <div class="boss">главная</div>
-        <a href="#">
-          <div class="underline">посмотреть лоты</div>
+  <header class="header">
+    <div class="container">
+
+      <div class="header__row">
+
+        <nav class="nav">
+          <ul class="nav__list">
+            <li class="nav__item nav__item-active"><a href="/" class="nav__link">главная</a></li>
+            <li class="nav__item"><a href="" class="nav__link">посмотреть лоты</a></li>
+            <li class="nav__item"><a href="" class="nav__link">об аукционе</a></li>
+          </ul>
+        </nav>
+
+        <a class="logo" href="/">
+          <img class="logo__img" src="images/logo-black.svg" alt="Логотип">
         </a>
-        <a href="#">
-          <div class="active">об аукционе</div>
-        </a>
+
+        <ul class="info">
+          <li class="info__item">
+            <a class="info__link" href="tel:+99995555555">+9 999 555 5555</a>
+          </li>
+          <li class="info__item ">
+            <a class="info__link" href="mailto:">info@sobaka.ge</a>
+          </li>
+          <li class="info__item">
+            <address class="info__address">наб. Принсенграхт 263-265, <br> Амстерда</address>
+          </li>
+        </ul>
+
       </div>
-    </nav>
-
-
-    <a class="header_logo">
-      <img src="images/logo-black.svg" alt="Логотип шапки">
-    </a>
-
-    <address class="navigation">
-
-      <div class="number_mail_addres">
-
-        <a href="tel:+99995555555">
-          <class="number">+9 999 555 5555>
-        </a>
-
-        <a href="mailto:info@sobaka.ge"></a>
-        </p>
-        class="mail">info@sobaka.ge</class=>
-        <p class="address">наб. Принсенграхт 263-265, Амстердам</p>
-    </address>
     </div>
-    </nav>
   </header>
 
-  <main>
+  <main class="main">
 
     <section class="offer">
       <div class="container">
 
         <div class="offer__wrap">
 
-          <h1 class="offer-hone">
-            <span class="offer-hone__text">оно</span>
-            <span class="offer-hone__text">тебе</span>
-            <span class="offer-hone__text">надо</span>
+          <h1 class="offer-h1">
+            <span class="offer-h1__text">оно</span>
+            <span class="offer-h1__text">тебе</span>
+            <span class="offer-h1__text">надо</span>
           </h1>
 
           <div class="offer__footer">
-
-            <span class="offer__footer-text"></span>
-            <p>
+            <span class="offer__footer-text">
               Аукцион вещей, в которые никто не верил </span>
-            </p>
             <button class="offer__footer-btn">
               Сделать ставку
             </button>
           </div>
+
         </div>
+
+
       </div>
     </section>
 
-
-
     <section class="articles">
       <div class="container">
+
         <h2 class="articles__title">Лоты</h2>
+
         <div class="articles__row">
-          <a href="#">
-            <article class="article">
+
+          <article class="article article__type-film">
+            <a href="/" class="article__link">
               <h3 class="article__title">
                 Фильм режиссёра, который бросил киношколу
               </h3>
@@ -90,10 +89,11 @@
                 Не просто бросил, а ушёл с первой лекции. Какой была бы ваша ставка, если бы вы не знали, что режиссёр —
                 Пол Томас Андерсон?
               </p>
-            </article>
-          </a>
-          <a href="#">
-            <article class="article">
+            </a>
+          </article>
+
+          <article class="article article__type-book">
+            <a href="/" class="article__link">
               <h3 class="article__title">
                 Книга, где описан один скучный день из жизни рекламного агента
               </h3>
@@ -103,10 +103,11 @@
                 это
                 всё накладывается на эпическую поэму Гомера. Сколько бы вы поставили на «Улисса» Джеймса Джойса?
               </p>
-            </article>
-          </a>
-          <a href="#">
-            <article class="article">
+            </a>
+          </article>
+
+          <article class="article article__type-picture">
+            <a href="/" class="article__link">
               <h3 class="article__title">
                 Картина, которую повторит даже 5-летний сын маминой подруги
               </h3>
@@ -116,13 +117,15 @@
                 революционных
                 работ Кандинского?
               </p>
-            </article>
-          </a>
+            </a>
+          </article>
+
         </div>
+
         <a href="/" class="articles__more-link">посмотреть больше</a>
+
       </div>
     </section>
-
 
     <section class="about">
       <div class="container">
@@ -157,48 +160,53 @@
     </section>
 
   </main>
-  <footer class="footerr">
-    <nav>
-      <div class="navigation_footer">
-        <address>
-          <p class="liphone">
-            <a href="tel:+99995555555">
-              <p class="numbertwo">+9 999 555 5555</p>
-            </a>
-            <a href="mailto:info@sobaka.ge">
-              <p class="mailfooter">info@sobaka.ge</p>
-            </a>
-          <p class="addressfooter">наб. Принсенграхт 263-265, Амстердам</p>
-        </address>
-      </div>
-    </nav>
-    <nav>
 
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__row">
 
-      <div class="List_footer">
-        <div class="listfooter_list">
-          <div>главная</div>
-          <a href="#">
-            <div>посмотреть лоты</div>
-          </a>
-          <a href="#">
-            <div>об аукционе</div>
-          </a>
-        </div>
+        <ul class="info">
+          <li class="info__item">
+            <a class="info__link" href="tel:+99995555555">+9 999 555 5555</a>
+          </li>
+          <li class="info__item ">
+            <a class="info__link" href="mailto:">info@sobaka.ge</a>
+          </li>
+          <li class="info__item">
+            <address class="info__address">наб. Принсенграхт 263-265, <br> Амстерда</address>
+          </li>
+        </ul>
+
+        <nav class="footer-nav">
+          <ul class="footer-nav__list">
+            <li class="footer-nav__item"><a href="" class="footer-nav__link">главная</a></li>
+            <li class="footer-nav__item"><a href="" class="footer-nav__link">посмотреть лоты</a></li>
+            <li class="footer-nav__item"><a href="" class="footer-nav__link">об аукционе</a></li>
+          </ul>
+        </nav>
+
+        <ul class="social">
+          <li class="social__item">
+            <a href="" class="social__link">
+              <img class="social__img" src="images/yt.svg" alt="ютуб">
+            </a>
+          </li>
+          <li class="social__item">
+            <a href="" class="social__link">
+              <img class="social__img" src="images/vk.svg" alt="вк">
+            </a>
+          </li>
+          <li class="social__item">
+            <a href="" class="social__link">
+              <img class="social__img" src="images/yt.svg" alt="пинтерест">
+            </a>
+          </li>
+        </ul>
+
       </div>
-      <div class="picturesfooterone">
-        <a href="#" target="_blank">
-          <img src="images/yt.svg" alt="ютуб">
-        </a>
-        <a href="#" target="_blank">
-          <img src="images/vk.svg" alt="вк">
-        </a>
-        <a href="#" target="_blank">
-          <img src="images/yt.svg" alt="пинтерест">
-        </a>
-      </div>
-    </nav>
+    </div>
   </footer>
+
 </body>
 
 </html>

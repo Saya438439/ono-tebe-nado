@@ -1,10 +1,25 @@
-.body {
-  width: 100% /* 1440px */;
-  /*background: var(--yellow-bg, #FEE42A); */
-  background: #fff;
-  margin: 0;
-  display: flex;
-  flex-direction: column; /* использовала для 3 секции по урокам гридов*/
+@font-face {
+  font-family: "Raleway";
+  src: url("../fonts/Raleway-Regular.woff2") format("woff2"),
+    url("../fonts/Raleway-Regular.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Raleway";
+  src: url("../fonts/Raleway-Bold.woff2") format("woff2"),
+    url("../fonts/Raleway-Bold.woff") format("woff");
+  font-weight: 700;
+  font-style: bold;
+}
+
+body {
+  overflow-x: hidden;
+  position: relative;
+  font-size: 18px;
+  line-height: normal;
+  font-family: "Raleway";
 }
 
 .container {
@@ -14,92 +29,64 @@
   padding: 0 20px;
 }
 
-.header_content {
-  display: grid;
-  grid-template-columns: 1.51fr 2fr 1.5fr;
-  align-items: center;
-  padding: 92px 51px 49px;
+.header {
+  padding: 96px 0;
 }
 
-.navigation {
-  display: grid;
-  gap: 32px;
-  text-align: right;
-  justify-content: space-evenly;
-}
-
-.number_mail_addres {
-  list-style: none;
-}
-
-.line {
+.nav__list {
   display: flex;
-  flex-direction: row;
-  justify-content: space-around;
+  gap: 33px;
 }
 
-.active {
-  text-decoration: underline;
-  font-family: Raleway, sans-serif;
-  font-size: 18px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: normal;
+.nav__item {
   stroke-width: 1px;
   stroke: #000;
   list-style-type: circle;
+  padding-bottom: 1px;
+  border-bottom: 1px solid #000;
+  text-decoration: none;
+  font-size: 18px;
 }
 
-.header_logo {
+.nav__item:nth-child(1) {
+  padding-left: 0;
+}
+
+.header__row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav__item-active {
+  list-style-type: none;
+  border-bottom: none;
+}
+
+.logo {
   display: block;
-  /* width: 92; */
   width: 148px;
-  height: 105px;
-  flex-shrink: 0;
-  margin: auto;
-  color: #000;
+  margin-right: auto;
+  margin-left: 209px;
 }
 
-.boss {
-  color: #000;
-  font-family: Raleway, sans-serif;
-  font-size: 18px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: normal;
-  list-style: none;
+.logo__img {
+  width: 100%;
+  height: auto;
 }
 
-.number {
-  width: 240px;
-  flex-shrink: 0;
-  color: #000;
-  font-family: Raleway, sans-serif;
-  font-size: 18px;
+.info__item {
+  display: block;
   font-style: normal;
-  font-weight: 400;
-  line-height: 24.3px; /* 135% */
 }
 
-.mail {
-  width: 100% /*240px*/;
-  flex-shrink: 0;
-  color: #000;
-  font-family: Raleway, sans-serif;
-  font-size: 18px;
+.info__address {
   font-style: normal;
-  font-weight: 400;
-  line-height: 24.3px; /* 135% */
 }
 
-.address {
-  width: 100% /*240px*/;
-  color: #000;
-  font-family: Raleway, sans-serif;
-  font-size: 18px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: 24.3px; /* 135% */
+.info__link {
+  border-bottom: 1px solid #000;
+  line-height: 24px;
 }
 
 .offer {
@@ -123,7 +110,7 @@
   z-index: 1;
 }
 
-.offer-hone {
+.offer-h1 {
   position: relative;
   z-index: 2;
   color: #fff;
@@ -143,15 +130,15 @@
   padding-bottom: 50px;
 }
 
-.offer-hone__text {
+.offer-h1__text {
   display: block;
 }
 
-.offer-hone__text:nth-child(2) {
+.offer-h1__text:nth-child(2) {
   text-align: center;
 }
 
-.offer-hone__text:nth-child(3) {
+.offer-h1__text:nth-child(3) {
   text-align: right;
   position: relative;
   left: 30px;
@@ -182,6 +169,87 @@
   color: #fff;
   cursor: pointer;
   text-transform: uppercase;
+}
+
+.articles {
+  position: relative;
+  padding-bottom: 182px;
+}
+
+.articles__title {
+  font-size: 40px;
+  text-transform: uppercase;
+  padding-left: 40px;
+  padding-bottom: 27px;
+}
+
+.article::after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  background-color: rgba(0, 0, 0, 0.6);
+  z-index: 1;
+}
+
+.article {
+  color: #fff;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  overflow: hidden;
+}
+
+.article__link {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 450px;
+  padding: 50px 40px;
+}
+
+.article__type-film {
+  background-image: url(../images/card-lot-01.jpg);
+}
+
+.article__type-book {
+  background-image: url(../images/card-lot-02.jpg);
+}
+
+.article__type-picture {
+  background-image: url(../images/card-lot-03.jpg);
+}
+
+.articles__row {
+  display: grid;
+  gap: 25px;
+  grid-template-columns: repeat(3, 1fr);
+  position: relative;
+  z-index: 2;
+  padding-bottom: 30px;
+}
+
+.article__title {
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 22px;
+  text-decoration: underline;
+  position: relative;
+  z-index: 2;
+}
+
+.article__text {
+  font-size: 20px;
+  line-height: 120%;
+  z-index: 2;
+}
+
+.articles__more-link {
+  padding-left: 40px;
+  font-size: 20px;
+  text-decoration: underline;
 }
 
 .about-logo-circle {
@@ -232,158 +300,36 @@
   line-height: normal;
 }
 
-/* СЕКЦИЯ С 3 КАРТИНКАМИ */
-
-.articles {
-  position: relative;
-  padding-bottom: 182px;
+.footer {
+  padding-bottom: 90px;
 }
 
-.articles__title {
-  font-size: 40px;
-  text-transform: uppercase;
-  padding-left: 40px;
-  padding-bottom: 27px;
-}
-
-.article::after {
-  content: "";
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  left: 0;
-  top: 0;
-  background-color: rgba(0, 0, 0, 0.6);
-  z-index: 1;
-}
-
-.article {
-  color: #fff;
-  background-image: url(../images/card-lot-01.jpg);
-  background-repeat: no-repeat;
-  background-size: cover;
-  height: 450px;
-  position: relative;
-  /* overflow: hidden; */
-  padding: 50px 40px;
+.social {
   display: flex;
-  flex-direction: column;
+  gap: 60px;
+}
+
+.footer__row {
+  display: flex;
   justify-content: space-between;
 }
 
-.article:nth-child(2) {
-  background-image: url(../images/card-lot-02.jpg);
+.social__item {
+  display: inline-block;
 }
 
-.article:nth-child(3) {
-  background-image: url(../images/card-lot-03.jpg);
+.social__img {
+  width: 50px;
 }
 
-.articles__row {
-  display: grid;
-  gap: 25px;
-  grid-template-columns: repeat(3, 1fr);
-  position: relative;
-  z-index: 2;
-  padding-bottom: 30px;
+.footer-nav__item {
+  list-style-type: none;
 }
 
-.article__title {
-  font-weight: 700;
-  text-transform: uppercase;
-  font-size: 22px;
-  text-decoration: underline;
-  position: relative;
-  z-index: 2;
-}
-
-.article__text {
-  font-size: 20px;
-  line-height: 120%;
-  z-index: 2;
-}
-
-.articles__more-link {
-  padding-left: 40px;
-  font-size: 20px;
+.footer-nav__link {
   text-decoration: underline;
 }
 
-/* ПОДВАЛ */
-
-.footerr {
-  display: grid;
-  grid-template-columns: 1.51fr 2fr 1.51fr;
-  padding: 90px 50px 49px;
-  width: 100% /*1440px*/;
-}
-
-.picturesfooterone {
-  display: flex;
-  width: 240px;
-  height: 48px;
-  flex-shrink: 0;
-  gap: 20%;
-}
-
-.List_footer {
-  gap: 32px;
-  text-align: right;
-  justify-content: space-evenly;
-  color: #000;
+.footer-nav__list {
   text-align: center;
-  font-family: Raleway, sans-serif;
-  font-size: 18px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: normal;
-  margin-top: 35px;
 }
-
-.listfooter_list {
-  list-style: none;
-  color: #000;
-  font-family: Raleway, sans-serif;
-  font-size: 18px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: 24.3px; /* 135% */
-}
-
-.navigation_footer {
-  display: flex;
-  margin-top: 60px;
-}
-
-.liphone {
-  list-style: none;
-}
-
-.numbertwo {
-  color: #000;
-  font-family: Raleway, sans-serif;
-  font-size: 18px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: 24.3px; /* 135% */
-}
-
-.mailfooter {
-  color: #000;
-  font-family: Raleway, sans-serif;
-  font-size: 18px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: 24.3px; /* 135% */
-}
-
-.addressfooter {
-  color: #000;
-  font-family: Raleway, sans-serif;
-  font-size: 18px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: 24.3px; /* 135% */
-}
-
-/* ПОДВАЛ */
